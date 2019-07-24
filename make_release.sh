@@ -1,6 +1,6 @@
 #!/bin/bash
 BIN=cloud-torrent
-GITVER=$(git rev-parse --short HEAD)
+GITVER=$(git describe --tags)
 
 rm -fv ${BIN}_*
 
