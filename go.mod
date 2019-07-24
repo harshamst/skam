@@ -29,4 +29,9 @@ require (
 	github.com/tomasen/realip v0.0.0-20180522021738-f0c99a92ddce // indirect
 )
 
-replace github.com/jpillora/cloud-torrent => ./
+replace (
+	github.com/jpillora/cloud-torrent => ./
+	github.com/jpillora/cloud-torrent/engine => ./engine/
+	github.com/jpillora/cloud-torrent/server => ./server/
+	github.com/jpillora/cloud-torrent/static => ./static/
+)

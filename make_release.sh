@@ -21,4 +21,5 @@ if [[ $OS == "windows" ]]; then
 fi
 
 #go mod vendor
-CGO_ENABLED=0 GOARCH=$ARCH GOOS=$OS go build -o ${BIN}_${OS}_${ARCH}${SUFFIX} -ldflags "-s -w -X main.VERSION=$GITVER" -mod vendor
+# CGO_ENABLED=0 GOARCH=$ARCH GOOS=$OS go build -o ${BIN}_${OS}_${ARCH}${SUFFIX} -ldflags "-s -w -X main.VERSION=$GITVER"
+CGO_ENABLED=0 GOARCH=$ARCH GOOS=$OS go build -o ${BIN}_${OS}_${ARCH}${SUFFIX} -ldflags "-s -w -X main.VERSION=$GITVER"
