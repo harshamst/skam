@@ -45,7 +45,12 @@ func (torrent *Torrent) Update(t *torrent.Torrent) {
 	if torrent.Loaded {
 		torrent.updateLoaded(t)
 		torrent.Stats = t.Stats()
-		torrent.SeedRatio = float32(torrent.Stats.BytesWritten.Int64()) / float32(torrent.Stats.BytesReadData.Int64())
+
+		bRead := torrent.Stats.BytesReadData.Int64()
+		bWrite := torrent.Stats.BytesWritten.Int64()
+		if bRead > 0 {
+			torrent.SeedRatio = float32(bWrite) / float32(bRead)
+		}
 	}
 	torrent.t = t
 }

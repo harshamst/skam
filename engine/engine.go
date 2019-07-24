@@ -101,7 +101,7 @@ func (e *Engine) GetTorrents() map[string]*Torrent {
 	for _, tt := range e.client.Torrents() {
 		torrent := e.upsertTorrent(tt)
 
-		if e.config.SeedRatio > 0 && torrent.SeedRatio > e.config.SeedRatio {
+		if e.config.SeedRatio > 0 && torrent.SeedRatio > e.config.SeedRatio && torrent.Started && torrent.Done {
 			log.Println("[Task Stoped] due to reach seeding ratio")
 			e.StopTorrent(torrent.InfoHash)
 		}
