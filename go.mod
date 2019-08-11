@@ -8,7 +8,7 @@ require (
 	github.com/elazarl/go-bindata-assetfs v1.0.0
 	github.com/jpillora/archive v0.0.0-20160301031048-e0b3681851f1
 	github.com/jpillora/backoff v0.0.0-20180909062703-3050d21c67d7
-	github.com/jpillora/cloud-torrent v0.0.0-00010101000000-000000000000
+	github.com/harshamst/skam v0.0.0-00010101000000-000000000000
 	github.com/jpillora/cookieauth v0.0.0-20190219222732-2ae29b2a9c76
 	github.com/jpillora/opts v1.0.5
 	github.com/jpillora/requestlog v0.0.0-20181015073026-df8817be5f82
@@ -21,8 +21,8 @@ require (
 )
 
 replace (
-	github.com/jpillora/cloud-torrent => ./
-	github.com/jpillora/cloud-torrent/engine => ./engine/
-	github.com/jpillora/cloud-torrent/server => ./server/
-	github.com/jpillora/cloud-torrent/static => ./static/
+	github.com/harshamst/skam => ./
+	github.com/harshamst/skam/engine => ./engine/
+	github.com/harshamst/skam/server => ./server/
+	github.com/harshamst/skam/static => ./static/
 )
